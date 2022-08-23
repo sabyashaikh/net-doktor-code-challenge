@@ -55,7 +55,7 @@ export default {
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 80%;
+  max-width: 960px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
@@ -99,7 +99,7 @@ export default {
 }
 
 .modal-body {
-  padding: 4em;
+  padding: 60px;
 }
 
 .modal-footer {
@@ -112,4 +112,21 @@ export default {
   display: block;
 }
 
+@media (max-width: 768px) {
+  .modal-body {
+    padding: 10px;
+  }
+
+  .modal-header{
+    padding: 10px;
+  }
+
+  .modal-content {
+    max-width: 350px;
+  }
+
+  .modal{
+    padding-top: 40px;
+  }
+}
 </style>

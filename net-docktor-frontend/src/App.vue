@@ -44,9 +44,10 @@ import CampaignList from "./components/CampaignList.vue";
 
 .header {
   display: flex;
+  align-items: center;
   width: 100%;
   height: 64px;
-  padding: 18px 1084px 17px 64px;
+  padding: 18px 64px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
   background-color: #00bef7;
 }
@@ -59,11 +60,31 @@ img.menu {
 
 
 .content {
-  height: calc(100% - 90px);
-  margin: 2em;
-  padding: 2em;
+  height: calc(100% - 104px);
+  margin: 40px 32px 0;
+  padding: 32px 32px 45px;
   border-radius: 2px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
   background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .Kampagnenmanager{
+      font-size: 20px;
+      line-height: 1.4;
+  }
+
+  .header{
+    padding-left: 20px;
+  }
+
+  .mainContainer{
+    padding: 0;
+  }
+
+  .content{
+    height: calc(100% - 64px);
+    margin: 0;
+  }
 }
 </style>

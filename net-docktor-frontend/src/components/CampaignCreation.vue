@@ -3,44 +3,44 @@
     <progress-indicator v-if="saving"></progress-indicator>
     <div v-else>
       <div class="row">
-        <div class="label col-3">
+        <div class="label col-md-3">
           Kampagnenname*:
         </div>
-        <div class="col-9">
+        <div class="col-md-9">
           <input v-model="campaign.name" class="form-input w-100"/>
           <div v-if="nameError" class="error">Dieses Feld kann nicht leer sein</div>
         </div>
       </div>
       <div class="row">
-        <div class="label col-3">
+        <div class="label col-md-3">
           Kunde*:
         </div>
-        <div class="col-9">
+        <div class="col-md-9">
           <input v-model="campaign.customer" class="form-input w-100"/>
           <div v-if="customerError" class="error">Dieses Feld kann nicht leer sein</div>
         </div>
       </div>
       <div class="row">
-        <div class="label col-3">
+        <div class="label col-md-3">
           Laufzeit:
         </div>
-        <div class="d-flex col-9">
-          <div class="me-3">
-            <span class="ml-2 subtext">Start*:</span>
+        <div class="flex-container col-md-9">
+          <div class="start mr-3">
+            <span class="mr-2 subtext">Start*:</span>
             <input v-model="campaign.start" type="date" class="form-input"/>
           </div>
-          <div>
-            <span class="ml-2">End*:</span>
+          <div class="end">
+            <span class="mr-2">End*:</span>
             <input v-model="campaign.end" type="date" class="form-input"/>
           </div>
-          <div v-if="startError || endError" class="ml-2 my-auto error">Dieses Feld kann nicht leer sein</div>
+          <div v-if="startError || endError" class="my-auto error">Dieses Feld kann nicht leer sein</div>
         </div>
       </div>
       <div class="row">
-        <div class="label col-3">
+        <div class="label col-md-3">
           Status:
         </div>
-        <div class="col-9">
+        <div class="col-md-9">
           <base-select
               :value="campaign.status"
               :options="['Created','Booked', 'Archived']"
@@ -52,16 +52,29 @@
         </div>
       </div>
       <div class="row">
-        <div class="label col-3">
+        <div class="label col-md-3">
           Notiz:
         </div>
-        <div class="col-9">
-          <textarea v-model="campaign.note" rows="4" class="form-input w-100"></textarea>
+        <div class="col-md-9">
+          <textarea
+              v-model="campaign.note"
+              rows="4"
+              class="form-input w-100">
+          </textarea>
         </div>
       </div>
-      <div class="row d-flex justify-content-end">
-        <base-button btn-type="secondary" @btn-click="cancel">ABBRECHEN</base-button>
-        <base-button class="ml-2" @btn-click="saveCampaign">ERSTELLEN</base-button>
+      <div class="row footer flex-container">
+        <base-button
+            class="footer-btn"
+            btn-type="secondary"
+            @btn-click="cancel">
+          ABBRECHEN
+        </base-button>
+        <base-button
+            class="footer-btn"
+            @btn-click="saveCampaign">
+          ERSTELLEN
+        </base-button>
       </div>
     </div>
   </div>
@@ -161,6 +174,10 @@ input {
   height: 36px;
 }
 
+.footer{
+  justify-content: end;
+}
+
 .subtext {
   font-size: 14px;
   letter-spacing: 0.5px;
@@ -170,6 +187,11 @@ input {
 .error {
   font-size: 10px;
   color: #f66363;
+  margin-left: 2px;
+}
+
+.footer-btn{
+  margin-left: 0.5rem;
 }
 
 .form-input {
@@ -178,8 +200,29 @@ input {
 }
 
 @media (max-width: 768px) {
-  [class*="col-"] {
-    width: 100% !important;
+
+  .start, .end {
+    width: 100%;
+    margin-top: 2px;
+    margin-right: 0 !important;
+  }
+
+  .footer-btn{
+    margin-top: 2px;
+    margin-left: 0 !important;
+    width: 100%;
+  }
+
+  .label{
+    text-align: left;
+  }
+
+  input{
+    width: 100%;
+  }
+
+  .error{
+    margin-left: 0;
   }
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="h-100 overflow-hidden">
       <div class="header flex-container">
         <span class="title">Alle Kampagnen</span>
         <base-button @click="showCampaignModal=true">KAMPAGNE ERSTELLEN</base-button>
@@ -107,7 +107,7 @@ export default {
 }
 
 .table{
-  height: 751px;
+  height: calc(100% - 66px) ;
   margin: 16px 0 0;
   border: solid 1px #d8d8d8;
 }
@@ -131,8 +131,8 @@ export default {
 
 
 .table__filter__multiselect {
-  width: 400px;
-  min-width: 400px;
+    width: 400px;
+    max-width: 100%;
 }
 
 .table__content{
@@ -144,6 +144,26 @@ export default {
 @media (max-width: 768px) {
   .table__filter {
     padding: 0.25em;
+  }
+
+  .header {
+    height: 80px;
+  }
+
+  .table__content{
+    height: calc(100% - 80px);
+  }
+
+  .table{
+      height: calc(100% - 96px) ;
+  }
+
+  .table__filter__text{
+    font-size: 12px;
+  }
+
+  .title{
+    font-size: 20px;
   }
 }
 
