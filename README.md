@@ -15,13 +15,13 @@ npm run dev
 ```
 
 
-## Starting the frontend server
+## Starting the Backend server
 1. Go to the backend folder  
 ```sh 
 cd net-docktor-backend
 ```
 
-2. Activate up env.
+2. Activate python env.
 ```sh 
 source env/bin/activate 
 ```
