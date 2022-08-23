@@ -130,3 +130,5 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:5173',
 )
+
+DATE_INPUT_FORMATS = ['%d-%m-%Y']

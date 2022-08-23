@@ -14,6 +14,7 @@ class Campaign(models.Model):
     start = models.DateField(blank=True)
     end = models.DateField(blank=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default="Created")
+    note = models.CharField(max_length=200, default="", blank=True)
 
     def __str__(self):
         return str(self.cs_id) + ' ' + str(self.name)

@@ -46,7 +46,6 @@ import CampaignList from "./components/CampaignList.vue";
   display: flex;
   width: 100%;
   height: 64px;
-  margin: 0 0 40px;
   padding: 18px 1084px 17px 64px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
   background-color: #00bef7;
@@ -60,7 +59,8 @@ img.menu {
 
 
 .content {
-  margin: 4em;
+  height: calc(100% - 90px);
+  margin: 2em;
   padding: 2em;
   border-radius: 2px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);

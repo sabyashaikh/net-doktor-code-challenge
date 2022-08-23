@@ -1,3 +1,11 @@
+<template>
+  <div :class="['button', btnType]" @click.stop="$emit('btn-click')">
+    <span class="button-text">
+      <slot></slot>
+    </span>
+  </div>
+</template>
+
 <script>
 export default {
     props: {
@@ -9,15 +17,6 @@ export default {
     }
   }
 </script>
-
-<template>
-  <div :class="['button', btnType]" @click="$emit('click')">
-    <span class="button-text">
-      <slot></slot>
-    </span>
-  </div>
-</template>
-
 
 
 <style scoped>
@@ -43,8 +42,12 @@ export default {
   color: #00bef7;
 }
 
-.button:hover{
+.primary.button:hover{
   background-color: #00b7f9
+}
+
+.secondary.button:hover{
+  color: #00b7f9
 }
 
 .button-text{

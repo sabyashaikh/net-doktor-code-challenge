@@ -9,13 +9,14 @@
   --vt-c-black-mute: #282828;
 
   --vt-c-indigo: #2c3e50;
+  --vt-c-grey: #444;
 
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
   --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
   --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-1: var(--vt-c-grey);
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
@@ -70,4 +71,19 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* multiselect tag */
+:root {
+  --ms-tag-bg: #e7f9fe;
+  --ms-tag-color: #444;
+  --ms-tag-font-weight: 400;
+  --ms-clear-color: #00bef7;
+  --ms-ring-color: rgba(0, 183, 249, 0.2);
+  --ms-option-bg-selected: #e7f9fe;
+  --ms-option-color-selected: #444;
+  --ms-option-bg-pointed: #e7f9fe;
+  --ms-option-color-pointed: #444;
+  --ms-option-bg-selected-pointed: #e7f9fe;
+  --ms-option-color-selected-pointed: #444;
 }

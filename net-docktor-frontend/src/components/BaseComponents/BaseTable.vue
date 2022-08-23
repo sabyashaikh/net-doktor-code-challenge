@@ -5,7 +5,10 @@
       <th v-for="(header, headerIndex) in headers"
           :key="headerIndex"
       >
-        {{header}}
+        <span class="mr-2">{{header}}</span>
+        <img src="../../assets/img/sort.svg"
+             class="sort-icon my-auto"
+        >
       </th>
     </thead>
     <tbody>
@@ -67,6 +70,10 @@ th{
   font-weight: bold;
   color: #444;
   letter-spacing: 0.57px;
+  background-color: #f4f6f8;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 td{
@@ -88,7 +95,14 @@ table{
 }
 
 .link:hover {
-     text-decoration:none;
-     color: #00b7f9
+  text-decoration:none;
+    color: #00b7f9
 }
+
+.sort-icon{
+  top: -2px;
+  height: 16px;
+  width: 16px;
+}
+
 </style>
