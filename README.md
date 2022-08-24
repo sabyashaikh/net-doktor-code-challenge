@@ -1,5 +1,14 @@
 # NetDoktor
 
+## Start the application via docker
+Run the below command from root folder
+```sh 
+docker-compose build   
+docker-compose up 
+```
+
+
+
 ## Starting the frontend server
 The frontend application was developed with Vue 3 in Vite.
 
@@ -15,7 +24,6 @@ npm run build
 ```sh 
 npm run dev  
 ```
-
 
 ## Starting the Backend server
 The backend application was developed with Django Rest Framework

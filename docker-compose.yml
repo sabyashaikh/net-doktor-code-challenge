@@ -1,0 +1,35 @@
+version: '3.9'
+services:
+
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  backend:
+    build:
+      context: ./net-docktor-backend/backendService
+      dockerfile: Dockerfile
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8081"
+    volumes:
+      - .:/code
+    ports:
+      - "8081:8081"
+    environment:
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./net-docktor-frontend
+      dockerfile: Dockerfile
+    image: result/latest
+    depends_on:
+      - backend
