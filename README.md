@@ -1,6 +1,8 @@
-# net-doktor
+# NetDoktor
 
 ## Starting the frontend server
+The frontend application was developed with Vue 3 in Vite.
+
 1. Go to the frontend folder  
 ```sh 
 cd net-docktor-frontend
@@ -16,6 +18,8 @@ npm run dev
 
 
 ## Starting the Backend server
+The backend application was developed with Django Rest Framework
+
 1. Go to the backend folder  
 ```sh 
 cd net-docktor-backend
@@ -33,7 +37,7 @@ cd backendService
 
 4. Install the requirements
 ```sh 
-pip install requirements.text
+pip install -r requirements.text
 ```
 
 5. Start the server. 
